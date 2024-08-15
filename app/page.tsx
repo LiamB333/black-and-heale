@@ -2,7 +2,11 @@ import React from "react";
 import NavBar from "./_components/Header/NavBar";
 import Footer from "./_components/Footer/Footer";
 import Hero from "./_components/Home/Hero/Hero";
-import Services from "./_components/Home/Hero/Services/Services";
+import Services from "./_components/Home/Services/Services";
+import ConstructionServices from "./_components/Home/Construction/ConstructionServices";
+import QualityServices from "./_components/Home/QualityServices/QualityServices";
+import CTA from "./_components/Home/CTA/CTA";
+import TestimonialSlider from "./_components/Testimonial/TestimonialSlider";
 
 const joineryFeatures = [
   "Customised Joinery Solutions for Commercial Spaces",
@@ -42,6 +46,28 @@ const Home = () => {
         features={joineryFeatures}
         title="Expert Joinery Services for Commercial and Private Projects"
         imageSrc="/bg-10.jpg"
+      />
+      <ConstructionServices
+        title="Experience the Best in Construction Services"
+        paragraph="At Black & Heale, we pride ourselves on providing quality
+            craftsmanship, comprehensive project management, and timely
+            delivery. With our team of experienced joiners and extensive
+            background in the construction industry, we can plan and organise
+            your full job from start to finish."
+      />
+      <QualityServices
+        title="Quality Construction Services for Every Project"
+        subtitle="Excellence"
+        paragraph="At Black & Heale, we offer a wide range of construction services to
+          meet the needs of both commercial and private clients. Our team of
+          experienced joiners can handle every aspect of your project, from
+          planning to completion. With our attention to detail and commitment to
+          quality, you can trust us to deliver exceptional results."
+      />
+      <TestimonialSlider testimonials={testimonials} />
+      <CTA
+        title="Transforming Spaces with Expert Craftsmanship"
+        subtitle="Contact us today for a consultation or quote on your construction project."
       />
       <Footer
         address="Coming soon"

@@ -20,7 +20,7 @@ const Services: React.FC<ServicesProps> = ({
 }) => {
   return (
     <section
-      className={`flex flex-col justify-center px-16 py-0 pb-24 ${bgColor} max-md:px-5`}
+      className={`flex flex-col justify-center px-16 pt-6 py-0 pb-24 ${bgColor} max-md:px-5`}
     >
       <div className="mt-8 max-md:mr-1 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">

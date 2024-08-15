@@ -10,11 +10,8 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ title, description }) => {
   return (
-    <main className="relative flex flex-col items-start px-16 py-1 text-white min-h-[800px] max-md:px-5 overflow-hidden">
-      <div
-        className="absolute inset-0 w-full h-full overflow-hidden"
-        style={{ height: "calc(100% - 100px)" }}
-      >
+    <main className="relative flex flex-col items-start px-16 py-1 text-white min-h-[550px] max-md:px-5 overflow-hidden">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
         <Image
           src="/bg-18.jpg"
           alt="Background Image"
@@ -25,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ title, description }) => {
           className="brightness-50"
         />
       </div>
-      <section className="relative mt-20 max-md:mt-10 max-w-full">
+      <section className="relative z-10 mt-20 max-md:mt-10 max-w-full">
         <h1 className="text-6xl font-bold leading-[67px] w-full max-w-[560px] max-md:text-4xl max-md:leading-[54px]">
           {title}
         </h1>

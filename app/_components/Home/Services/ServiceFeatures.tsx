@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface ServiceFeatureProps {
   text: string;
@@ -7,11 +8,10 @@ interface ServiceFeatureProps {
 const ServiceFeature: React.FC<ServiceFeatureProps> = ({ text }) => {
   return (
     <div className="flex gap-4 mt-4 leading-[150%] max-md:flex-wrap">
-      <img
-        loading="lazy"
-        alt=""
-        className="shrink-0 my-auto w-4 aspect-square"
-      />
+      <div className="relative shrink-0 my-auto w-4 h-4">
+        {" "}
+        <Image src="/check-new.svg" alt="Feature Icon" layout="fill" objectFit="contain" />
+      </div>
       <div className="flex-1 max-md:max-w-full">{text}</div>
     </div>
   );
