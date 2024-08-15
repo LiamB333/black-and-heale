@@ -18,7 +18,7 @@ const Contact = () => {
       <ContactPage />
       <FAQS />
       <Footer
-        address="Coming soon"
+        address="Soon"
         phone="07768 437002"
         email="aaronblack1@hotmail.co.uk"
       />
