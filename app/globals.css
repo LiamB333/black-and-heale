@@ -17,6 +17,7 @@
 }
 
 body {
+  overflow-x: hidden;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -30,4 +31,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.thinner-arrow {
+  width: 0.6em; /* Make the arrow thinner */
+  height: 1em; /* Keep height proportional */
+  transform-origin: center;
 }
