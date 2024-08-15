@@ -53,7 +53,7 @@ const Services = () => {
       />
       <TestimonialCard
         imageSrc="/bg-17.jpg"
-        rating={1}
+        rating={5}
         testimonial="Working with Black & Heale on my private joinery project was a great experience. They were professional, efficient, and delivered exceptional results."
         author="John Smith"
         role="Homeowner"

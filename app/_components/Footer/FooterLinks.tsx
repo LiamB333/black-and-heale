@@ -6,7 +6,8 @@ const FooterLinks: React.FC = () => {
       { label: "About Us", url: "/about" },
       { label: "Contact Us", url: "/contact" },
       { label: "Services", url: "/services" },
-      { label: "Projects", url: "/projects" },
+      { label: "Commercial", url: "/commercial" },
+      { label: "Private", url: "/private" },
     ],
   ];
 

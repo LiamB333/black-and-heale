@@ -1,24 +1,27 @@
 import React from "react";
+import Image from "next/image";
 
 interface StarRatingProps {
   rating: number;
 }
 
 const StarRating: React.FC<StarRatingProps> = ({ rating }) => {
+  const filledStarSrc = "/star.svg";
+
   return (
     <div className="flex overflow-hidden gap-1 items-start">
-      {[...Array(5)].map((_, index) => (
-        <img
-          key={index}
-          loading="lazy"
-          alt={index < rating ? "Filled star" : "Empty star"}
-          className="object-contain shrink-0 w-5 aspect-[1.05]"
-        />
+      {[...Array(rating)].map((_, index) => (
+        <div key={index} className="relative w-5 h-5">
+          <Image
+            src={filledStarSrc}
+            alt="Filled star"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
       ))}
     </div>
   );
 };
-{
-  /* Star svg */
-}
+
 export default StarRating;
