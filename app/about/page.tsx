@@ -8,6 +8,7 @@ import { MilestonesSection } from "../_components/About/Milestone/MilestoneSecti
 import TestimonialSlider from "../_components/Testimonial/TestimonialSlider";
 import { TopSection } from "../_components/About/TopSection/TopSection";
 import TeamMember from "../_components/About/TeamMembers/TeamMembers";
+import GeneralNavBar from "../_components/GeneralNavBar/GeneralNavBar";
 
 const testimonials = [
   {
@@ -67,7 +68,7 @@ const About = () => {
   ];
   return (
     <div>
-      <NavBar />
+      <GeneralNavBar />
       <Hero
         title="Experienced"
         subtitle="Building Your Dreams with Quality Craftsmanship"

@@ -24,7 +24,9 @@ const FooterLinks: React.FC = () => {
             <a
               key={linkIndex}
               href={link.url}
-              className={linkIndex > 0 ? "mt-3 max-md:mt-1" : "max-md:mt-1"}
+              className={`${
+                linkIndex > 0 ? "mt-3 max-md:mt-1" : "max-md:mt-1"
+              } hover:text-[#9CAE47] transition-colors duration-300`}
             >
               {link.label}
             </a>

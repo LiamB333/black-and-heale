@@ -6,8 +6,8 @@ import TestimonialSlider from "../_components/Testimonial/TestimonialSlider";
 import Footer from "../_components/Footer/Footer";
 
 import CTA from "../_components/CTA/CTA";
-import Heading from "../_components/About/Heading/Heading";
 import ContactHeader from "../_components/Heading/Heading";
+import GeneralNavBar from "../_components/GeneralNavBar/GeneralNavBar";
 
 const testimonials = [
   {
@@ -31,7 +31,7 @@ const testimonials = [
 const Services = () => {
   return (
     <div>
-      <NavBar />
+      <GeneralNavBar />
       <ContactHeader
         title="Quality Construction Services"
         description="We offer a wide range of construction services, tailored to meet your needs."

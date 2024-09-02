@@ -32,7 +32,7 @@ const ConstructionServices: React.FC<ConstructionServicesProps> = ({
         </div>
         <div className="flex gap-6 items-center self-center pt-4 mt-12 text-base text-black max-md:mt-10">
           <Link href="/services">
-            <button className="gap-2 self-stretch px-6 py-3 my-auto border border-black border-solid max-md:px-5">
+            <button className="gap-2 self-stretch px-6 py-3 my-auto border hover:border-[#9CAE47] hover:text-[#9CAE47] border-black border-solid max-md:px-5">
               Learn More
             </button>
           </Link>

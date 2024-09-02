@@ -6,6 +6,7 @@ import TestimonialSlider from "../_components/Testimonial/TestimonialSlider";
 import CTA from "../_components/CTA/CTA";
 import Footer from "../_components/Footer/Footer";
 import ContactHeader from "../_components/Heading/Heading";
+import GeneralNavBar from "../_components/GeneralNavBar/GeneralNavBar";
 
 const portfolio = [
   {
@@ -45,7 +46,7 @@ const testimonials = [
 const Private = () => {
   return (
     <div>
-      <NavBar />
+      <GeneralNavBar />
       <ContactHeader
         title="Experienced Private Joinery"
         description="Tailored solutions for all your private joinery needs."

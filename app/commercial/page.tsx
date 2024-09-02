@@ -6,6 +6,7 @@ import TestimonialSlider from "../_components/Testimonial/TestimonialSlider";
 import CTA from "../_components/CTA/CTA";
 import Footer from "../_components/Footer/Footer";
 import ContactHeader from "../_components/Heading/Heading";
+import GeneralNavBar from "../_components/GeneralNavBar/GeneralNavBar";
 
 const portfolio = [
   {
@@ -46,7 +47,7 @@ const testimonials = [
 const Commercial = () => {
   return (
     <div>
-      <NavBar />
+      <GeneralNavBar />
       <ContactHeader
         title="Quality Commercial Joinery"
         description="Transforming spaces with expert craftsmanship and attention to detail."

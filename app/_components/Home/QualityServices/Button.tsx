@@ -10,7 +10,7 @@ const Button: React.FC<ButtonProps> = ({ children, variant }) => {
     "flex gap-2 justify-center items-center self-stretch my-auto";
   const variantClasses = {
     primary:
-      "px-6 py-3 text-white bg-black border border-black border-solid max-md:px-5",
+      "px-6 py-3 text-white bg-black border border-black border-solid max-md:px-5 hover:bg-[#9CAE47] hover:border-[#9CAE47] hover:text-black",
     secondary: "text-black whitespace-nowrap",
   };
 
