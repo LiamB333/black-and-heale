@@ -12,7 +12,7 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ address, phone, email }) => {
   return (
-    <footer className="flex flex-col px-16 py-20 bg-white max-md:px-5">
+    <footer className="flex flex-col px-16 py-24 bg-white max-md:px-5">
       <div className="flex flex-wrap gap-10 w-full max-md:flex-col max-md:items-center">
         <div className="flex flex-col min-w-[240px] max-md:w-full items-start max-md:items-center">
           <div className="flex flex-col w-full items-start max-md:items-center">

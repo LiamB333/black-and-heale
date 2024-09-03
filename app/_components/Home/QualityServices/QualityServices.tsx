@@ -6,7 +6,6 @@ import Image from "next/image";
 
 interface QualityServices {
   title: string;
-  subtitle: string;
   paragraph: string;
 }
 interface ServiceData {
@@ -36,19 +35,12 @@ const services: ServiceData[] = [
   },
 ];
 
-const QualityServices: React.FC<QualityServices> = ({
-  title,
-  subtitle,
-  paragraph,
-}) => {
+const QualityServices: React.FC<QualityServices> = ({ title, paragraph }) => {
   return (
-    <main className="flex overflow-hidden flex-col justify-center px-16 py-28 bg-white max-md:px-5 max-md:py-24">
+    <main className="flex overflow-hidden flex-col justify-center px-16 py-24 bg-white max-md:px-5 max-md:py-24">
       <section className="flex flex-wrap gap-10 items-start w-full text-black max-md:max-w-full">
         <div className="flex overflow-hidden flex-col flex-1 shrink basis-0 min-w-[240px] max-md:max-w-full">
-          <h2 className="text-base font-semibold max-md:max-w-full">
-            {subtitle}
-          </h2>
-          <h1 className="mt-4 text-5xl font-bold leading-[58px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
+          <h1 className="text-5xl font-bold leading-[58px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">
             {title}
           </h1>
         </div>

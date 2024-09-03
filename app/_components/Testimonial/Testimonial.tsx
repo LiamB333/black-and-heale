@@ -31,7 +31,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
       <footer className="flex flex-col mt-8 max-w-full text-base w-[300px] items-center">
         <div className="flex flex-col items-center mt-4 w-full">
           <cite className="font-semibold not-italic">{authorName}</cite>
-          <p className="text-[#9CAE47]">{authorTitle}</p>
+          <p>{authorTitle}</p>
         </div>
       </footer>
     </article>

@@ -29,46 +29,31 @@ function NavBar() {
           <div className="hidden flex-1 justify-center lg:flex">
             <div className="flex gap-5 text-white max-md:flex-wrap">
               <Link href="/about">
-                <div className="hover:text-[#9CAE47]">About Us</div>
+                <div>About Us</div>
               </Link>
               <Link href="/services">
-                <div className="hover:text-[#9CAE47]">Services</div>
+                <div>Services</div>
               </Link>
 
               {/* Projects Link with Dropdown */}
               <div className="relative group">
-                <div className="flex items-center cursor-pointer hover:text-[#9CAE47]">
+                <div className="flex items-center cursor-pointer">
                   <span>Projects</span>
-                  <FaChevronDown className="ml-1 transition-transform duration-300 ease-in-out thinner-arrow group-hover:rotate-180" />
+                  <FaChevronDown className="ml-1 mt-1 mt-1transition-transform duration-300 ease-in-out thinner-arrow group-hover:rotate-180" />
                 </div>
                 <div className="absolute left-0 hidden group-hover:block border text-white border-gray-300 shadow-lg">
                   <Link href="/commercial">
-                    <div className="px-4 py-2 hover:text-[#9CAE47]">
-                      Commercial
-                    </div>
+                    <div className="px-4 py-2">Commercial</div>
                   </Link>
                   <Link href="/private">
-                    <div className="px-4 py-2 hover:text-[#9CAE47]">
-                      Private
-                    </div>
+                    <div className="px-4 py-2">Private</div>
                   </Link>
                 </div>
               </div>
 
-              {/* More Link with Dropdown */}
-              <div className="relative group">
-                <div className="flex items-center cursor-pointer hover:text-[#9CAE47]">
-                  <span>More</span>
-                  <FaChevronDown className="ml-1 transition-transform duration-300 ease-in-out thinner-arrow group-hover:rotate-180" />
-                </div>
-                <div className="absolute left-0 hidden group-hover:block border border-gray-300 shadow-lg">
-                  <Link href="/contact">
-                    <div className="px-4 py-2 text-white hover:text-[#9CAE47]">
-                      Contact
-                    </div>
-                  </Link>
-                </div>
-              </div>
+              <Link href="/contact">
+                <div>Contact</div>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:block text-white">

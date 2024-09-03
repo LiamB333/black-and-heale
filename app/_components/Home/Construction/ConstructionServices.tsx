@@ -13,7 +13,7 @@ const ConstructionServices: React.FC<ConstructionServicesProps> = ({
   paragraph,
 }) => {
   return (
-    <section className="flex overflow-hidden flex-col px-16 py-28 bg-zinc-100 max-md:px-5 max-md:py-24">
+    <section className="flex overflow-hidden flex-col px-16 py-24 bg-zinc-100 max-md:px-5 max-md:py-24">
       <header className="flex flex-col self-center max-w-full text-center text-black w-[768px]">
         <div className="flex flex-col w-full max-md:max-w-full">
           <h1 className="text-5xl font-bold leading-[58px] max-md:max-w-full max-md:text-4xl max-md:leading-[54px]">

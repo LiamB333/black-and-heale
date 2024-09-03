@@ -41,7 +41,7 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
   };
 
   return (
-    <section className="flex overflow-hidden flex-col justify-center px-16 pb-24 bg-white max-md:px-5 py-4">
+    <section className="flex overflow-hidden flex-col justify-center px-16 pb-24 bg-white max-md:px-5 pt-24">
       <div className="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
         <NavigationButton direction="left" onClick={handlePrev} />
         <Testimonial

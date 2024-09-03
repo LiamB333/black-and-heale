@@ -57,7 +57,6 @@ const Home = () => {
       />
       <QualityServices
         title="Quality Construction Services for Every Project"
-        subtitle="Excellence"
         paragraph="At Black & Heale, we offer a wide range of construction services to
           meet the needs of both commercial and private clients. Our team of
           experienced joiners can handle every aspect of your project, from
