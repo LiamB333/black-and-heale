@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import ProjectGrid from "./ProjectGrid/ProjectGrid";
 
-
 interface StickyBarProps {
   sections: { id: string; label: string }[];
 }
@@ -23,95 +22,95 @@ const StickyBar: React.FC<StickyBarProps> = ({ sections }) => {
       all: [
         {
           text: "Glenmore Retreat",
-          imageUrl: "/contact-bg.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/all-item1",
         },
         {
           text: "Lochwood Estate",
-          imageUrl: "/contact-bg.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/all-item2",
         },
         {
           text: "Brackenridge Lodge",
-          imageUrl: "/contact-bg.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/all-item3",
         },
       ],
       commercial: [
         {
           text: "Carronview Manor",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/commercial1",
         },
         {
           text: "Silverbrook Cabin",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/commercial2",
         },
         {
           text: "Oakwood Chalet",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/commercial2",
         },
       ],
       residential: [
         {
           text: "Cairnhill Retreat",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/cairnhill-retreat",
         },
         {
           text: "Cragview Cottage",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/residential2",
         },
         {
           text: "Birchwood Lodge",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/residential3",
         },
         {
           text: "Glenburn Hall",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/residential4",
         },
         {
           text: "Glenfinnan Lodge",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/residential5",
         },
       ],
       new: [
         {
           text: "Inverloch Cabin",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/newbuild1",
         },
         {
           text: "Lochside House",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/newbuild2",
         },
         {
           text: "Ashwood Villa",
-          imageUrl: "/projects-hero.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/newbuild2",
         },
       ],
       roofing: [
         {
           text: "Foxhill Bungalow",
-          imageUrl: "/project-management.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/roofing1",
         },
         {
           text: "Hilltop Grange",
-          imageUrl: "/project-management.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/roofing2",
         },
         {
           text: "Oakwood Chalet",
-          imageUrl: "/project-management.jpg",
+          imageUrl: "/projects/projects-hero.jpg",
           link: "/roofing3",
         },
       ],
