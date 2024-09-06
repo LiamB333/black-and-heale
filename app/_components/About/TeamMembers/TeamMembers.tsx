@@ -43,7 +43,7 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
   }, [isModalOpen]);
 
   return (
-    <div className="relative flex flex-col items-center text-center bg-white p-0 w-full md:w-1/3 lg:w-1/4 mx-4 my-8 shadow-lg overflow-hidden group">
+    <div className="relative flex flex-col items-center text-center bg-white p-0 w-full md:w-1/3 lg:w-1/4 mx-4 my-8 shadow-lg overflow-hidden">
       {/* Image section */}
       <div className="relative w-full h-64">
         <Image

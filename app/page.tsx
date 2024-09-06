@@ -16,20 +16,16 @@ const joineryFeatures = [
 
 const testimonials = [
   {
-    logoSrc: "/home/testimonial-person-1.jpg",
     quote:
       "Our experience with Black & Heale was exceptional. They delivered high-quality work and completed the project on time.",
     authorName: "Nigel Bromley",
     authorTitle: "CEO, Example Corp",
-    authorImageSrc: "/home/testimonial-person-1.jpg",
   },
   {
-    logoSrc: "/home/testimonial-person-2.jpg",
     quote:
       "Working with Black & Heale was a pleasure. Their attention to detail and commitment to excellence exceeded our expectations.",
     authorName: "Jane Smith",
     authorTitle: "CTO, Another Corp",
-    authorImageSrc: "/home/testimonial-person-2.jpg",
   },
 ];
 

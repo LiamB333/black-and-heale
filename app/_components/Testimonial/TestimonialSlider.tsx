@@ -8,7 +8,6 @@ interface TestimonialData {
   quote: string;
   authorName: string;
   authorTitle: string;
-  authorImageSrc: string;
 }
 
 interface TestimonialSliderProps {
@@ -25,8 +24,7 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
     return <div>No testimonials available.</div>; // Fallback UI
   }
 
-  const { quote, authorName, authorTitle, authorImageSrc } =
-    testimonials[activeIndex];
+  const { quote, authorName, authorTitle } = testimonials[activeIndex];
 
   const handleNext = () => {
     setActiveIndex((prevIndex) =>
@@ -41,7 +39,7 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
   };
 
   return (
-    <section className="flex flex-col justify-center items-center px-16 pb-24 bg-white max-md:px-5 pt-24">
+    <section className="flex flex-col justify-center items-center px-16 pb-44 bg-white max-md:px-5 pt-24">
       {/* Testimonial and Navigation Buttons for larger screens */}
       <div className="flex gap-10 justify-between items-center w-full max-md:hidden">
         <NavigationButton direction="left" onClick={handlePrev} />
@@ -49,7 +47,6 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
           quote={quote}
           authorName={authorName}
           authorTitle={authorTitle}
-          authorImageSrc={authorImageSrc}
         />
         <NavigationButton direction="right" onClick={handleNext} />
       </div>
@@ -60,7 +57,6 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
           quote={quote}
           authorName={authorName}
           authorTitle={authorTitle}
-          authorImageSrc={authorImageSrc}
         />
         <div className="flex gap-4 justify-center mt-6">
           <NavigationButton direction="left" onClick={handlePrev} />

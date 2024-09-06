@@ -14,15 +14,16 @@ interface ProjectGridProps {
 
 const ProjectGrid: React.FC<ProjectGridProps> = ({ content }) => {
   return (
-    <div className="mt-24 pb-24 container mx-auto px-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="mt-24 pb-24 px-4 md:px-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {content.map((item, index) => (
           <a
             key={index}
             href={item.link}
-            className="block shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105"
+            className="group block shadow-md overflow-hidden relative"
           >
-            <div className="relative w-full h-64 ">
+            {/* Image */}
+            <div className="relative w-full h-96">
               <Image
                 src={item.imageUrl}
                 alt={item.text}
@@ -30,9 +31,21 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ content }) => {
                 objectFit="cover"
               />
             </div>
-            <h1 className="text-center p-4 sm:p-6 md:p-8 text-lg sm:text-xl md:text-2xl font-semibold">
-              {item.text}
-            </h1>
+
+            {/* Hidden content (title and button) */}
+            <div className="absolute bottom-0 left-0 w-full bg-white transition-all duration-300 ease-in-out h-20 group-hover:h-32 p-4 flex flex-col items-center">
+              {/* Centered content */}
+              <div className="flex flex-col items-center justify-center">
+                <h1 className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-4 transition-transform duration-300 group-hover:-translate-y-1">
+                  {item.text}
+                </h1>
+
+                {/* Button */}
+                <button className="border border-solid border-black text-black py-2 px-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  View Project
+                </button>
+              </div>
+            </div>
           </a>
         ))}
       </div>

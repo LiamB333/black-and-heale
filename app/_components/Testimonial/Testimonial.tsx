@@ -5,24 +5,21 @@ interface TestimonialProps {
   quote: string;
   authorName: string;
   authorTitle: string;
-  authorImageSrc: string;
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({
   quote,
   authorName,
   authorTitle,
-  authorImageSrc,
 }) => {
   return (
     <article className="flex overflow-hidden flex-col items-center self-stretch my-auto text-center text-black min-w-[240px] w-[768px] max-md:max-w-full">
-      <div className="relative w-20 h-20 self-center rounded-full overflow-hidden">
+      <div className="relative self-center overflow-hidden">
         <Image
-          src={authorImageSrc}
+          src="icons/logo.svg"
           alt={authorName}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-full"
+          width={240}
+          height={100}
         />
       </div>
       <blockquote className="self-stretch text-2xl font-bold leading-9 mt-8 max-md:max-w-full">

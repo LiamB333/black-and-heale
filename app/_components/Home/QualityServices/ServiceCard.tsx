@@ -13,7 +13,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   serviceDescription,
 }) => {
   return (
-    <article className="flex flex-col items-center flex-1 shrink basis-0 min-w-[280px] max-w-[350px] mx-4">
+    <article className="flex flex-col items-center flex-1 shrink basis-0 min-w-[280px] max-w-[350px] ">
       {/* Image container */}
       <div className="relative w-full aspect-[1.5]">
         <Image

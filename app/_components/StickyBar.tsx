@@ -35,6 +35,21 @@ const StickyBar: React.FC<StickyBarProps> = ({ sections }) => {
           imageUrl: "/projects/projects-hero.jpg",
           link: "/all-item3",
         },
+        {
+          text: "Carronview Manor",
+          imageUrl: "/projects/projects-hero.jpg",
+          link: "/commercial1",
+        },
+        {
+          text: "Silverbrook Cabin",
+          imageUrl: "/projects/projects-hero.jpg",
+          link: "/commercial2",
+        },
+        {
+          text: "Oakwood Chalet",
+          imageUrl: "/projects/projects-hero.jpg",
+          link: "/commercial2",
+        },
       ],
       commercial: [
         {
@@ -63,22 +78,7 @@ const StickyBar: React.FC<StickyBarProps> = ({ sections }) => {
           text: "Cragview Cottage",
           imageUrl: "/projects/projects-hero.jpg",
           link: "/residential2",
-        },
-        {
-          text: "Birchwood Lodge",
-          imageUrl: "/projects/projects-hero.jpg",
-          link: "/residential3",
-        },
-        {
-          text: "Glenburn Hall",
-          imageUrl: "/projects/projects-hero.jpg",
-          link: "/residential4",
-        },
-        {
-          text: "Glenfinnan Lodge",
-          imageUrl: "/projects/projects-hero.jpg",
-          link: "/residential5",
-        },
+        }
       ],
       new: [
         {
