@@ -20,6 +20,7 @@ const Hero: React.FC<HeroProps> = ({ title, description, imageSrc }) => {
           objectFit="cover"
           quality={100}
           className="brightness-50 object-bottom"
+          priority
         />
       </div>
 

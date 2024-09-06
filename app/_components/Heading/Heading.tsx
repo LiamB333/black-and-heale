@@ -21,6 +21,7 @@ const ContactHeader: React.FC<ContactHeaderProps> = ({
           objectFit="cover"
           quality={100}
           className="brightness-50"
+          priority
         />
       </div>
 
