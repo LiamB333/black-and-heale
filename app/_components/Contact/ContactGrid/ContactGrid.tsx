@@ -8,13 +8,10 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <div className="flex overflow-hidden flex-col justify-center mt-12 px-16 py-28 bg-zinc-100 max-md:px-5 max-md:py-24">
+    <div className="flex overflow-hidden flex-col justify-center px-16 py-28 bg-zinc-100 max-md:px-5 max-md:py-24">
       <div className="flex flex-wrap gap-10 items-start w-full max-md:max-w-full">
         <div className="flex flex-col flex-1 shrink basis-0 min-w-[240px] max-md:max-w-full">
           <div className="flex flex-col w-full text-black max-md:max-w-full">
-            <div className="self-start text-base font-semibold text-center">
-              Efficient
-            </div>
             <div className="flex flex-col mt-4 w-full max-md:max-w-full">
               <h1 className="text-5xl font-bold leading-tight max-md:max-w-full max-md:text-4xl">
                 Get in Touch
@@ -28,7 +25,7 @@ const ContactPage: React.FC = () => {
         </div>
         <div className="relative flex-1 shrink w-full aspect-[0.84] basis-0 min-w-[240px] max-md:max-w-full">
           <Image
-            src="/bg-1.jpg"
+            src="/contact/contact-form-img.jpg"
             alt="Descriptive alt text"
             layout="fill"
             objectFit="contain"

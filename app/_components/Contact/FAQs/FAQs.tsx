@@ -42,17 +42,16 @@ const FAQS: React.FC = () => {
         <div className="text-5xl font-bold leading-tight max-md:max-w-full max-md:text-4xl">
           Questions
         </div>
-        <div className="mt-6 text-lg max-md:max-w-full">
+        <p className="mt-6 text-lg max-md:max-w-full">
           Find answers to frequently asked questions about our services and
           contact process.
-        </div>
+        </p>
       </div>
       <div className="flex flex-col self-stretch mt-20 w-full text-black max-md:mt-10 max-md:max-w-full">
         {faqData.map((item, index) => (
           <FAQItem key={index} question={item.question} answer={item.answer} />
         ))}
       </div>
-      <ContactSection />
     </div>
   );
 };

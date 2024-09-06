@@ -7,7 +7,7 @@ const ContactButton: React.FC = () => {
       <span>Contact Us</span>
       <div className="relative w-4 h-4">
         <Image
-          src="/right-arrow.svg"
+          src="/icons/right-arrow.svg"
           alt="Contact Us Icon"
           layout="fill"
           objectFit="cover"

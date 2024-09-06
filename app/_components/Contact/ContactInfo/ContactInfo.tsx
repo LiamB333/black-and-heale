@@ -6,7 +6,7 @@ const contactData = [
     iconSrc: "icons/mail-green.svg",
     title: "Email",
     description:
-      "Please feel free to reach out to us with any questions or inquiries.",
+      "Please feel free to reach out to us with any questions.",
     contact: "aaronblack1@hotmail.com",
   },
   {
@@ -19,15 +19,15 @@ const contactData = [
     iconSrc: "icons/location-green.svg",
     title: "Office",
     description:
-      "Don't hesitate to contact us for all your construction needs.",
+      "Contact us for all your construction needs.",
     contact: "To add",
   },
 ];
 
 const ContactInfo: React.FC = () => {
   return (
-    <div className="flex overflow-hidden flex-col justify-center px-16 text-center bg-white max-md:px-5 max-md:py-10">
-      <div className="flex flex-wrap gap-10 items-center w-full max-md:max-w-full">
+    <div className="flex overflow-hidden px-16 text-center bg-white max-md:px-5 max-md:py-10">
+      <div className="flex flex-wrap gap-10 items-center w-full max-md:max-w-full z-30">
         {contactData.map((item, index) => (
           <ContactItem
             key={index}

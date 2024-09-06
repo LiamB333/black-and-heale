@@ -41,8 +41,9 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
   };
 
   return (
-    <section className="flex overflow-hidden flex-col justify-center px-16 pb-24 bg-white max-md:px-5 pt-24">
-      <div className="flex flex-wrap gap-10 justify-between items-center w-full max-md:max-w-full">
+    <section className="flex flex-col justify-center items-center px-16 pb-24 bg-white max-md:px-5 pt-24">
+      {/* Testimonial and Navigation Buttons for larger screens */}
+      <div className="flex gap-10 justify-between items-center w-full max-md:hidden">
         <NavigationButton direction="left" onClick={handlePrev} />
         <Testimonial
           quote={quote}
@@ -52,6 +53,21 @@ const TestimonialSlider: React.FC<TestimonialSliderProps> = ({
         />
         <NavigationButton direction="right" onClick={handleNext} />
       </div>
+
+      {/* Testimonial with buttons underneath for smaller screens */}
+      <div className="hidden max-md:flex flex-col items-center w-full">
+        <Testimonial
+          quote={quote}
+          authorName={authorName}
+          authorTitle={authorTitle}
+          authorImageSrc={authorImageSrc}
+        />
+        <div className="flex gap-4 justify-center mt-6">
+          <NavigationButton direction="left" onClick={handlePrev} />
+          <NavigationButton direction="right" onClick={handleNext} />
+        </div>
+      </div>
+
       <SliderDots count={testimonials.length} activeIndex={activeIndex} />
     </section>
   );

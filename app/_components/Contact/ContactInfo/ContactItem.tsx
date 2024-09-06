@@ -15,7 +15,7 @@ const ContactItem: React.FC<ContactItemProps> = ({
   contact,
 }) => {
   return (
-    <div className="flex flex-col flex-1 shrink self-stretch my-auto basis-0 min-w-[240px]">
+    <div className="flex flex-col flex-1 shrink self-stretch my-auto basis-0 min-w-[240px] bg-white p-10 ">
       <div className="relative self-center w-12 h-12">
         <Image
           src={iconSrc}
@@ -28,13 +28,9 @@ const ContactItem: React.FC<ContactItemProps> = ({
       <div className="flex flex-col mt-6 w-full">
         <div className="flex flex-col w-full text-black items-center">
           <div className="text-3xl font-bold leading-tight">{title}</div>
-          <div className="mt-4 text-base leading-6">{description}</div>
+          <p className="mt-4 text-base leading-6">{description}</p>
         </div>
-        <div className="mt-6 text-base text-black items-center">
-          {" "}
-          {/* text-[#9CAE47] */}
-          {contact}
-        </div>
+        <p className="mt-6 text-base text-black items-center"> {contact}</p>
       </div>
     </div>
   );

@@ -8,12 +8,12 @@ const Contact: React.FC = () => {
         <div className="text-3xl font-bold leading-tight max-md:max-w-full">
           Contact Us
         </div>
-        <div className="mt-4 text-lg max-md:max-w-full">
+        <p className="mt-4 text-lg max-md:max-w-full">
           Still have questions? Get in touch with us.
-        </div>
+        </p>
       </div>
       <Link href={`mailto:aaronblack1@hotmail.co.uk`}>
-        <button className="gap-2 self-stretch px-6 py-3 mt-6 max-w-full text-base text-black whitespace-nowrap border border-black border-solid w-[104px] max-md:px-5">
+        <button className="gap-2 self-stretch px-6 py-3 mt-6 max-w-full text-base text-black whitespace-nowrap border border-black border-solid w-[104px] max-md:px-5 hover:border-[#9CAE47] hover:text-[#9CAE47]">
           Contact
         </button>
       </Link>

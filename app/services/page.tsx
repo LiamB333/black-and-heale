@@ -1,68 +1,51 @@
 import React from "react";
-import NavBar from "../_components/Header/NavBar";
 import { CommercialSolutions } from "../_components/Services/Commercial/CommercialSolutions";
-import TestimonialCard from "../_components/Services/Testimonial/TestimonialSection";
-import TestimonialSlider from "../_components/Testimonial/TestimonialSlider";
 import Footer from "../_components/Footer/Footer";
-
-import CTA from "../_components/CTA/CTA";
-import ContactHeader from "../_components/Heading/Heading";
-import GeneralNavBar from "../_components/GeneralNavBar/GeneralNavBar";
-
-const testimonials = [
-  {
-    logoSrc: "/Our-team-4.jpg",
-    quote:
-      "Our experience with Black & Heale was exceptional. They delivered high-quality work and completed the project on time.",
-    authorName: "Nigel Bromley",
-    authorTitle: "CEO, Example Corp",
-    authorImageSrc: "/Our-team-4.jpg",
-  },
-  {
-    logoSrc: "/Our-team-5.jpg",
-    quote:
-      "Working with Black & Heale was a pleasure. Their attention to detail and commitment to excellence exceeded our expectations.",
-    authorName: "Jane Smith",
-    authorTitle: "CTO, Another Corp",
-    authorImageSrc: "/Our-team-5.jpg",
-  },
-];
+import CTA from "../_components/Home/CTA/CTA";
+import TopSection from "../_components/TopSection";
+import GeneralNavBar from "../_components/GeneralNavBar";
 
 const Services = () => {
   return (
     <div>
       <GeneralNavBar />
-      <ContactHeader
-        title="Quality Construction Services"
-        description="We offer a wide range of construction services, tailored to meet your needs."
+      <TopSection
+        title="Our Services"
+        description="Tailored solutions for all your joinery needs."
+        imageSrc="/services/services-hero.jpg"
       />
       <CommercialSolutions
-        title="Commercial Joinery Services for Your Construction Projects"
-        subtitle="Commercial"
-        description="At Black & Heale, we specialise in providing top-notch joinery services for commercial construction projects. With our extensive experience and expertise, we can handle all types of joinery work, ensuring high-quality results that meet your specific requirements."
-        imageSrc="/bg-11.jpg"
+        title="Design and Build"
+        description="Transform your commercial vision into reality with our comprehensive Design and Build services. From concept to completion, we seamlessly integrate design, engineering, and construction to deliver functional and aesthetically pleasing structures tailored to your business needs."
+        imageSrc="/services/design-and-build.jpg"
         learnMoreUrl="/commercial"
       />
       <CommercialSolutions
-        title="Private Joinery Services for Your Projects"
-        subtitle="Private"
-        description="At Black & Heale, we specialise in providing high-quality joinery services for private projects. Our team of experienced joiners has a deep understanding of the construction industry and can handle a wide range of projects from start to finish."
-        imageSrc="/bg-4.jpg"
+        title="Project Management"
+        description="Navigating the complexities of construction is easier with our expert project management. We oversee every phase, ensuring timelines, budgets, and quality standards are met, so you can focus on your core business while we handle the details."
+        imageSrc="/services/project-management.jpg"
         bgColor="bg-[#f4f4f5]"
         learnMoreUrl="/private"
+        isInverted={true}
       />
-      <TestimonialCard
-        imageSrc="/bg-17.jpg"
-        rating={5}
-        testimonial="Working with Black & Heale on my private joinery project was a great experience. They were professional, efficient, and delivered exceptional results."
-        author="John Smith"
-        role="Homeowner"
-        companyLogo="/logo.svg"
+      <CommercialSolutions
+        title="New Construction"
+        description="Breaking new ground? We specialise in new construction, bringing innovation, precision, and craftsmanship to every project. Whether it’s a large-scale commercial development or a bespoke building, our expertise ensures a strong foundation for your future."
+        imageSrc="/services/new-build.jpg"
+        learnMoreUrl="/private"
       />
-      <TestimonialSlider testimonials={testimonials} />
+      <CommercialSolutions
+        title="Roofing Services"
+        description="Protect your investment with our comprehensive roofing services. We offer durable, weather-resistant roofing solutions tailored to your specific requirements. From installation to repair, we ensure your building stays safe and secure from the top down"
+        imageSrc="/services/roofing.jpg"
+        bgColor="bg-[#f4f4f5]"
+        learnMoreUrl="/private"
+        isInverted={true}
+      />
       <CTA
-        title="Transforming Your Vision Into Reality"
-        description="Contact us today for a detailed consultation or quote for your construction projects."
+        imgSrc="/services/services-cta.jpg"
+        title="Transforming Spaces with Expert Craftsmanship"
+        subtitle="Contact us today for a consultation or quote on your construction project."
       />
       <Footer
         address="Coming soon"

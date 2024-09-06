@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ address, phone, email }) => {
           <div className="flex flex-col w-full items-start max-md:items-center">
             <div className="flex justify-center max-md:justify-center">
               <Image
-                src="/logo.svg"
+                src="/icons/logo.svg"
                 alt="Grip Gear logo"
                 width={220}
                 height={60}

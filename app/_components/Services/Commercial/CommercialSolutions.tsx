@@ -7,27 +7,31 @@ interface CommercialSolutionsProps {
   title: string;
   description: string;
   bgColor?: string;
-  subtitle: string;
   learnMoreUrl?: string;
+  isInverted?: boolean;
 }
 
 export const CommercialSolutions: React.FC<CommercialSolutionsProps> = ({
   title,
   description,
   imageSrc,
-  subtitle,
-  bgColor = "bg-white", // Default to white background if no color is provided
+  bgColor = "bg-white",
   learnMoreUrl,
+  isInverted = false,
 }) => {
   return (
     <div
-      className={`flex overflow-hidden flex-col justify-center px-16 py-6 max-md:px-5 max-md:py-24 ${bgColor}`}
+      className={`flex overflow-hidden flex-col justify-center px-16 max-md:px-5 max-md:py-24 ${bgColor}`}
     >
-      <div className="flex flex-wrap gap-10 items-center w-full max-md:max-w-full">
+      <div
+        className={`flex flex-wrap gap-10 items-center w-full max-md:max-w-full ${
+          isInverted ? "flex-row-reverse" : ""
+        }`}
+      >
+        {/* Conditionally render text and image positions */}
         <ContentSection
           title={title}
           description={description}
-          subtitle={subtitle}
           learnMoreUrl={learnMoreUrl}
         />
         <div className="relative flex-1 shrink self-stretch my-auto w-full aspect-[0.96] basis-0 min-w-[240px] max-md:max-w-full">

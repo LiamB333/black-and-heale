@@ -1,54 +1,118 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
-interface TeamMemberProps {
+interface TeamMembersProps {
   imageSrc: string;
-  name: string;
+  fullName: string;
   title: string;
-  description: string;
-  socialIcons: string[];
+  yearInIndustry: string;
+  yearInBH: string;
+  role: string;
 }
 
-const TeamMember: React.FC<TeamMemberProps> = ({
+const TeamMembers: React.FC<TeamMembersProps> = ({
   imageSrc,
-  name,
+  fullName,
   title,
-  description,
-  socialIcons,
+  yearInIndustry,
+  yearInBH,
+  role,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  // Effect to handle scroll prevention
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isModalOpen]);
+
   return (
-    <div className="flex flex-col flex-1 shrink items-center basis-0 min-w-[240px] max-w-full mx-auto py-28">
-      <div className="relative w-20 h-20">
+    <div className="relative flex flex-col items-center text-center bg-white p-0 w-full md:w-1/3 lg:w-1/4 mx-4 my-8 shadow-lg overflow-hidden group">
+      {/* Image section */}
+      <div className="relative w-full h-64">
         <Image
           src={imageSrc}
-          alt={`${name}, ${title}`}
+          alt={fullName}
           layout="fill"
           objectFit="cover"
-          className="rounded-full"
+          className="absolute inset-0"
         />
       </div>
-      <div className="flex flex-col self-stretch mt-6 w-full text-center text-black">
-        <div className="flex flex-col w-full">
-          <div className="text-xl font-semibold">{name}</div>
-          <div className="text-lg">{title}</div>
-        </div>
-        <div className="mt-4 text-base leading-6">{description}</div>
+      {/* Content section */}
+      <div className="relative z-20 p-6 ">
+        <h3 className="text-2xl font-semibold mb-3">{fullName}</h3>
+        <p className="text-lg text-gray-600">{title}</p>
       </div>
-      <div className="flex gap-3.5 items-start mt-6">
-        {socialIcons.map((icon, index) => (
-          <div key={index} className="relative w-6 h-6">
-            <Image
-              src={icon}
-              alt=""
-              layout="fill"
-              objectFit="contain"
-              className="shrink-0"
-            />
+      {/* Button section */}
+      <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 group-hover:opacity-100 z-10">
+        <button
+          className="px-4 py-2 bg-[#9CAE47] text-white rounded-full"
+          onClick={openModal}
+        >
+          View Profile
+        </button>
+      </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+          <div className="relative bg-white p-8 max-w-2xl w-full h-auto">
+            {/* Close button outside of the modal content */}
+            <button
+              className="absolute -top-5 -right-5 bg-[#9CAE47] text-white rounded-full w-10 h-10 flex items-center justify-center"
+              onClick={closeModal}
+            >
+              <span className="text-3xl pb-1 leading-none">&times;</span>
+            </button>
+
+            {/* Modal Content */}
+            <h2 className="text-2xl font-semibold text-left mb-2 border-b border-gray-300 pb-12">
+              {fullName}
+            </h2>
+            <div className="space-y-4">
+              {[
+                { label: "Job Title", value: title },
+                { label: "Years in Industry", value: yearInIndustry },
+                { label: "Years at B&H", value: yearInBH },
+                { label: "Main Roles", value: role },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className={`flex items-start py-2 ${
+                    index < 3 ? "border-b border-gray-300" : ""
+                  }`}
+                >
+                  <p className="text-md text-gray-500 font-medium text-left w-1/4">
+                    {item.label}
+                  </p>
+                  <p className="text-lg text-black pl-20 text-left w-3/4">
+                    {item.value}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="border-t border-gray-300 mt-4 pb-12"></div>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default TeamMember;
+export default TeamMembers;

@@ -19,7 +19,7 @@ function NavBar() {
         <div className="flex gap-5 justify-between items-center w-full max-md:flex-wrap max-md:mr-1 max-md:max-w-full">
           <Link href="/">
             <Image
-              src="/logo-white.svg"
+              src="/icons/logo-white.svg"
               alt="Grip Gear logo"
               width={220}
               height={60}
@@ -28,19 +28,17 @@ function NavBar() {
           </Link>
           <div className="hidden flex-1 justify-center lg:flex">
             <div className="flex gap-5 text-white max-md:flex-wrap">
-              <Link href="/about">
-                <div>About Us</div>
-              </Link>
               <Link href="/services">
-                <div>Services</div>
-              </Link>
-
-              {/* Projects Link with Dropdown */}
-              <div className="relative group">
-                <div className="flex items-center cursor-pointer">
-                  <span>Projects</span>
-                  <FaChevronDown className="ml-1 mt-1 mt-1transition-transform duration-300 ease-in-out thinner-arrow group-hover:rotate-180" />
+                <div className="hover:text-[#9CAE47] duration-300">
+                  Services
                 </div>
+              </Link>
+              <Link href="/projects">
+                <div className="hover:text-[#9CAE47] duration-300">
+                  Projects
+                </div>
+              </Link>
+              {/*
                 <div className="absolute left-0 hidden group-hover:block border text-white border-gray-300 shadow-lg">
                   <Link href="/commercial">
                     <div className="px-4 py-2">Commercial</div>
@@ -49,10 +47,12 @@ function NavBar() {
                     <div className="px-4 py-2">Private</div>
                   </Link>
                 </div>
-              </div>
-
+                */}
+              <Link href="/about">
+                <div className="hover:text-[#9CAE47] duration-300">About</div>
+              </Link>
               <Link href="/contact">
-                <div>Contact</div>
+                <div className="hover:text-[#9CAE47] duration-300">Contact</div>
               </Link>
             </div>
           </div>
@@ -63,7 +63,7 @@ function NavBar() {
           </div>
           <div className="lg:hidden">
             <FaBars
-              className="text-black w-6 h-6 cursor-pointer"
+              className="text-white w-6 h-6 cursor-pointer"
               onClick={toggleMenu}
             />
           </div>

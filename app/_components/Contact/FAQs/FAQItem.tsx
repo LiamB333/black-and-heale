@@ -13,9 +13,9 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
           {question}
         </div>
       </div>
-      <div className="gap-4 pb-6 w-full text-base leading-6 max-md:max-w-full">
+      <p className="gap-4 pb-6 w-full text-base leading-6 max-md:max-w-full">
         {answer}
-      </div>
+      </p>
     </div>
   );
 };

@@ -4,17 +4,18 @@ import Button from "./Button";
 import Link from "next/link";
 
 interface CTAProps {
+  imgSrc: string;
   title: string;
   subtitle: string;
 }
 
-const CTA: React.FC<CTAProps> = ({ title, subtitle }) => {
+const CTA: React.FC<CTAProps> = ({ title, subtitle, imgSrc }) => {
   return (
     <section className="flex overflow-hidden relative flex-col justify-center items-start px-16 py-28 min-h-[479px] max-md:px-5 max-md:py-24">
       <div className="object-cover absolute inset-0 size-full">
         <Image
-          src="/bg-3.jpg"
-          alt=""
+          src={imgSrc}
+          alt={imgSrc}
           layout="fill"
           objectFit="cover"
           priority

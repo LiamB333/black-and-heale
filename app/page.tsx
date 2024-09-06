@@ -16,20 +16,20 @@ const joineryFeatures = [
 
 const testimonials = [
   {
-    logoSrc: "/Our-team-4.jpg",
+    logoSrc: "/home/testimonial-person-1.jpg",
     quote:
       "Our experience with Black & Heale was exceptional. They delivered high-quality work and completed the project on time.",
     authorName: "Nigel Bromley",
     authorTitle: "CEO, Example Corp",
-    authorImageSrc: "/Our-team-4.jpg",
+    authorImageSrc: "/home/testimonial-person-1.jpg",
   },
   {
-    logoSrc: "/Our-team-5.jpg",
+    logoSrc: "/home/testimonial-person-2.jpg",
     quote:
       "Working with Black & Heale was a pleasure. Their attention to detail and commitment to excellence exceeded our expectations.",
     authorName: "Jane Smith",
     authorTitle: "CTO, Another Corp",
-    authorImageSrc: "/Our-team-5.jpg",
+    authorImageSrc: "/home/testimonial-person-2.jpg",
   },
 ];
 
@@ -45,7 +45,7 @@ const Home = () => {
         bgColor="bg-white"
         features={joineryFeatures}
         title="Expert Joinery Services for Commercial and Private Projects"
-        imageSrc="/bg-10.jpg"
+        imageSrc="/home/home-services.jpg"
       />
       <ConstructionServices
         title="Experience the Best in Construction Services"
@@ -67,6 +67,7 @@ const Home = () => {
       <CTA
         title="Transforming Spaces with Expert Craftsmanship"
         subtitle="Contact us today for a consultation or quote on your construction project."
+        imgSrc="/home/home-cta.jpg"
       />
       <Footer
         address="Coming soon"

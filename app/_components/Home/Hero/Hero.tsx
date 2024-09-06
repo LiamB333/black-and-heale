@@ -13,7 +13,7 @@ const Hero: React.FC<HeroProps> = ({ title, description }) => {
     <main className="relative flex flex-col items-start px-16 py-1 text-white min-h-[610px] max-md:px-5 overflow-hidden -mt-24">
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <Image
-          src="/bg-test.png"
+          src="/home/home-hero.png"
           alt="Background Image"
           layout="fill"
           objectFit="cover"

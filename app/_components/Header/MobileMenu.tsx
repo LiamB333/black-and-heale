@@ -23,21 +23,21 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         <Link href="/">
           <div onClick={onClose}>Home</div>
         </Link>
-        <Link href="/design">
-          <div onClick={onClose}>Design</div>
+        <Link href="/services">
+          <div onClick={onClose}>Services</div>
+        </Link>
+        <Link href="/projects">
+          <div onClick={onClose}>Projects</div>
         </Link>
         <Link href="/about">
-          <div onClick={onClose}>About Us</div>
+          <div onClick={onClose}>About</div>
         </Link>
         <Link href="/contact">
-          <div onClick={onClose}>Contact Us</div>
-        </Link>
-        <Link href="/design">
           <div
-            className="px-5 py-3 font-medium text-white whitespace-nowrap bg-black hover:bg-black rounded-[30px] cursor-pointer"
+            className="px-5 py-3 font-medium text-white whitespace-nowrap bg-[#9CAE47] rounded-[30px] cursor-pointer"
             onClick={onClose}
           >
-            Get Started
+            Contact Us
           </div>
         </Link>
       </div>
