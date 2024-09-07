@@ -76,7 +76,7 @@ const AboutSection = () => {
       <div className="container mx-auto my-10">
         <section id="our-team" className="mb-20 text-center mt-24">
           <h2 className="text-3xl text-center font-bold mb-5">Our Team</h2>
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {teamMembers.map((member, index) => (
               <TeamMembers
                 key={index}

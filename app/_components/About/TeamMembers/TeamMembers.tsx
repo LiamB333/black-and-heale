@@ -43,9 +43,9 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
   }, [isModalOpen]);
 
   return (
-    <div className="relative flex flex-col items-center text-center bg-white p-0 w-full md:w-1/3 lg:w-1/4 mx-4 my-8 shadow-lg overflow-hidden">
-      {/* Image section */}
-      <div className="relative w-full h-64">
+    <div className="group relative block shadow-md overflow-hidden">
+      {/* Image */}
+      <div className="relative w-full h-96">
         <Image
           src={imageSrc}
           alt={fullName}
@@ -54,15 +54,14 @@ const TeamMembers: React.FC<TeamMembersProps> = ({
           className="absolute inset-0"
         />
       </div>
-      {/* Content section */}
-      <div className="relative z-20 p-6 ">
-        <h3 className="text-2xl font-semibold mb-3">{fullName}</h3>
-        <p className="text-lg text-gray-600">{title}</p>
-      </div>
-      {/* Button section */}
-      <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 opacity-0 group-hover:opacity-100 z-10">
+
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 w-full bg-white transition-all duration-300 ease-in-out h-20 group-hover:h-32 p-5 flex flex-col items-center">
+        <h3 className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-4 transition-transform duration-300 group-hover:-translate-y-1">
+          {fullName}
+        </h3>
         <button
-          className="px-4 py-2 bg-[#9CAE47] text-white rounded-full"
+          className="border border-solid hover:text-[#9CAE47] hover:border-[#9CAE47] border-black text-black py-2 px-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           onClick={openModal}
         >
           View Profile

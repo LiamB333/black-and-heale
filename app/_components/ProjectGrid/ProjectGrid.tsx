@@ -17,9 +17,8 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ content }) => {
     <div className="mt-24 pb-24 px-4 md:px-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {content.map((item, index) => (
-          <a
+          <div
             key={index}
-            href={item.link}
             className="group block shadow-md overflow-hidden relative"
           >
             {/* Image */}
@@ -33,7 +32,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ content }) => {
             </div>
 
             {/* Hidden content (title and button) */}
-            <div className="absolute bottom-0 left-0 w-full bg-white transition-all duration-300 ease-in-out h-20 group-hover:h-32 p-4 flex flex-col items-center">
+            <div className="absolute bottom-0 left-0 w-full bg-white transition-all duration-300 ease-in-out h-20 group-hover:h-32 p-5 flex flex-col items-center">
               {/* Centered content */}
               <div className="flex flex-col items-center justify-center">
                 <h1 className="text-center text-lg sm:text-xl md:text-2xl font-semibold mb-4 transition-transform duration-300 group-hover:-translate-y-1">
@@ -41,12 +40,12 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ content }) => {
                 </h1>
 
                 {/* Button */}
-                <button className="border border-solid border-black text-black py-2 px-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <button className="border border-solid border-black text-black py-2 px-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100 hover:text-[#9CAE47] hover:border-[#9CAE47]">
                   View Project
                 </button>
               </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>
